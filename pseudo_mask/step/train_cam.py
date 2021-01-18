@@ -68,9 +68,9 @@ def run(args):
     for ep in range(args.cam_num_epoches):
 
         print('Epoch %d/%d' % (ep+1, args.cam_num_epoches))
-
+        print(train_data_loader[0])
         for step, pack in enumerate(train_data_loader):
-
+            
             img = pack['img']
             label = pack['label'].cuda(non_blocking=True)
 
